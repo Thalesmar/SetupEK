@@ -1,0 +1,32 @@
+.infinite-slider-container {
+  overflow: hidden;
+  background: rgb(10, 10, 10);
+}
+
+.infinite-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 10px 0;
+  width: max-content;
+}
+
+.tag {
+  font-size: 33px;
+  line-height: 72px;
+  letter-spacing: 0.1em;
+  font-family:
+    Bebas Neue,
+    sans-serif;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.tag.black {
+  color: #333;
+}
+
+.tag.white {
+  color: white;
+}

@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'BespokeStencil';
+  src: url('/assets/fonts/BespokeStencil-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'BespokeStencil';
+  src: url('/assets/fonts/BespokeStencil-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/fonts/Satoshi-Light.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/fonts/Satoshi-Black.otf') format('opentype');
+  font-weight: 700 900;
+}
+
+:root {
+  --body-background: #f5f5f5;
+  --main-background: #fefefd;
+  --main-font-family: 'Roboto Condensed', sans-serif;
+  --second-background: #f0f0f0;
+  --third-background: #0066ff;
+  --first-border-color: #dad8d8;
+  --second-border-color: #4682b4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width : thin;
+  scrollbar-color: var(--third-background) var(--main-background);
+}
+
+body {
+  font-family: 'Satoshi', sans-serif;
+  background-color: var(--body-background);
+}

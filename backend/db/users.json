@@ -1,0 +1,20 @@
+[
+  {
+    "id": "9be09a40-f727-491f-aa18-eea63d0dc60e",
+    "firstName": "john",
+    "secondName": "doe",
+    "email": "afklqafk@gmail.com",
+    "password": "$2b$10$7nZJ9k5aCpktBZ.3Q1ITouIgu788dkJKYbqAxkFDanOLpY0Xt7MmW",
+    "role": "user",
+    "createdAt": "2026-06-09T09:13:24.125Z"
+  },
+  {
+    "id": "38e22bda-53a0-436d-8b57-90327adcacb5",
+    "firstName": "Thales",
+    "secondName": "doe",
+    "email": "hello@gmail.com",
+    "password": "$2b$10$ZTYUajFBzcTs6qJE.DxTkux/8.YoltnCZzVJPT1rE/OycpW/eweH.",
+    "role": "user",
+    "createdAt": "2026-06-10T04:30:27.260Z"
+  }
+]

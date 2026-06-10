@@ -1,0 +1,133 @@
+.form-container {
+  width: 100%;
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--body-background);
+  padding: 2rem 1rem;
+}
+
+.form-wrapper {
+  background: var(--main-background);
+  border: 1px solid var(--first-border-color);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+}
+
+/* TABS */
+.form-switch {
+  display: flex;
+  border-bottom: 2px solid var(--first-border-color);
+  margin-bottom: 2rem;
+}
+
+.login-btn,
+.signup-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  background: none;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #888;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+  font-family: var(--main-font-family);
+  letter-spacing: 0.5px;
+}
+
+.login-btn.active,
+.signup-btn.active {
+  color: var(--third-background);
+  border-bottom-color: var(--third-background);
+}
+
+/* FORM FIELDS */
+.login-container,
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.name-container {
+  display: flex;
+  gap: 12px;
+}
+
+.fst-name,
+.sec-name,
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+input {
+  border: 1px solid var(--first-border-color);
+  outline: none;
+  padding: 11px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  background: var(--second-background);
+  color: #111;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+input:focus {
+  border-color: var(--third-background);
+  background: #fff;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+/* SUBMIT */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--third-background);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-family: var(--main-font-family);
+  letter-spacing: 0.8px;
+  transition: opacity 0.2s;
+}
+
+.submit-btn:hover {
+  opacity: 0.88;
+}
+
+.forget-password{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.forget-password p{
+  font-size: 13px;
+  color: var(--third-background);
+  cursor: pointer;
+  transition: color 0.2s;
+}

@@ -1,0 +1,22 @@
+.images-line-container{
+  width: 100%;
+  background-color: rgb(10, 10, 10);
+}
+
+.images-line-wrapper{
+  display: flex;
+  height: 260px;
+  gap: 0px;
+}
+
+.images-line{
+  flex: 1 1 0%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.images-line img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

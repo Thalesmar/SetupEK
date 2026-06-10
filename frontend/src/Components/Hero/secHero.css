@@ -1,0 +1,174 @@
+.sec-hero {
+  position: relative;
+  min-height: clamp(420px, 62vh, 600px);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(0, 107, 255, 0.22), transparent 28%),
+    radial-gradient(circle at 18% 74%, rgba(0, 107, 255, 0.22), transparent 34%),
+    radial-gradient(circle at 88% 10%, rgba(255, 255, 255, 0.1), transparent 28%),
+    linear-gradient(135deg, #0d1422 0%, #172444 50%, #070b12 100%);
+  /* border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.25);
+}
+
+.floating-lines-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  opacity: 0.86;
+  cursor: grab;
+}
+
+.floating-lines-container canvas {
+  display: block;
+}
+
+.sec-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 11, 18, 0.32), transparent 30%, transparent 70%, rgba(7, 11, 18, 0.32)),
+    radial-gradient(circle at center, transparent 0%, rgba(7, 11, 18, 0.42) 76%);
+  pointer-events: none;
+}
+
+.sec-hero-content {
+  position: relative;
+  z-index: 1;
+  min-height: inherit;
+  width: min(100%, 820px);
+  margin: 0 auto;
+  padding: clamp(2.4rem, 5vw, 4rem) 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.sec-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+  padding: 0.28rem 0.8rem 0.28rem 0.32rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(5, 9, 16, 0.62);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.sec-hero-badge span {
+  display: inline-grid;
+  place-items: center;
+  min-height: 1.5rem;
+  padding: 0 0.68rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0b1220;
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.sec-hero-badge strong {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.sec-hero-content h2 {
+  max-width: 700px;
+  margin: 0;
+  color: #ffffff;
+  font-family: 'BespokeStencil', sans-serif;
+  font-size: clamp(2.15rem, 4.1vw, 4rem);
+  line-height: 1.06;
+  font-weight: 700;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.38);
+}
+
+.sec-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.7rem;
+  flex-wrap: wrap;
+}
+
+.sec-hero-actions button {
+  min-width: 122px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0.82rem 1.18rem;
+  font-size: 0.9rem;
+  font-weight: 900;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.sec-hero-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.sec-hero-primary {
+  background: #ffffff;
+  color: #07101f;
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.26),
+    0 0 0 1px rgba(255, 255, 255, 0.22) inset;
+}
+
+.sec-hero-primary:hover {
+  box-shadow:
+    0 20px 44px rgba(0, 107, 255, 0.24),
+    0 0 0 1px rgba(255, 255, 255, 0.28) inset;
+}
+
+.sec-hero-primary svg {
+  font-size: 1rem;
+}
+
+.sec-hero-secondary {
+  background: rgba(255, 255, 255, 0.09);
+  color: rgba(255, 255, 255, 0.86);
+  border-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.sec-hero-secondary:hover {
+  background: rgba(0, 107, 255, 0.22);
+  border-color: rgba(0, 107, 255, 0.48);
+}
+
+@media (max-width: 620px) {
+  .sec-hero {
+    min-height: 430px;
+  }
+
+  .sec-hero-actions {
+    width: min(100%, 320px);
+  }
+
+  .sec-hero-actions button {
+    flex: 1 1 140px;
+  }
+}

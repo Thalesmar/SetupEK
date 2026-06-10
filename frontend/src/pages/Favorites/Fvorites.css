@@ -1,0 +1,191 @@
+.favorites-page {
+  max-width: 1400px;
+  margin: 2.5rem auto;
+  padding: 0 2rem;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.favorites-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.favorites-header h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.favorites-count {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #888;
+  background: var(--second-background);
+  border: 1px solid var(--first-border-color);
+  border-radius: 99px;
+  padding: 4px 12px;
+  vertical-align: middle;
+}
+
+.favorites-clear {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e00;
+  background: none;
+  border: 1px solid #e00;
+  border-radius: 7px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.favorites-clear:hover { background: #fff0f0; }
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.favorites-card {
+  background: white;
+  border: 1px solid #ececec;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(17,17,17,0.04);
+  transition: transform 0.28s ease, border-color 0.28s ease;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.favorites-card:hover { transform: translateY(-2px); border-color: var(--third-background); }
+
+.favorites-card-img {
+  position: relative;
+  background: #f5f7fa;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.favorites-card-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  padding: 12px;
+  transition: transform 0.3s ease;
+}
+
+.favorites-card:hover .favorites-card-img img { transform: scale(1.07); }
+
+.favorites-card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--third-background);
+  color: white;
+  font-size: 10px;
+  font-weight: 900;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+
+.favorites-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #e00;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.favorites-remove:hover { transform: scale(1.1); }
+
+.favorites-card-info { padding: 1rem 1.1rem 1.1rem; }
+
+.favorites-card-brand {
+  font-size: 11px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.favorites-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  color: #111;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.favorites-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.favorites-card-price { font-size: 1.15rem; font-weight: 900; color: var(--third-background); }
+
+.favorites-add-btn {
+  background: var(--third-background);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 900;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+
+.favorites-add-btn:hover { background: #0056d6; }
+
+.favorites-empty {
+  text-align: center;
+  padding: 5rem 0;
+  color: #888;
+  grid-column: 1 / -1;
+}
+
+.favorites-empty h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: #ccc; margin-bottom: 1rem; }
+
+.favorites-empty a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 12px 28px;
+  background: var(--third-background);
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.favorites-empty a:hover { background: #0056d6; }
+
+@media (max-width: 1100px) { .favorites-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) { .favorites-grid { grid-template-columns: repeat(2, 1fr); } .favorites-page { padding: 0 1rem; } }
+@media (max-width: 480px) { .favorites-grid { grid-template-columns: 1fr; } }
