@@ -3,7 +3,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { Product } from '../src/types.js';
 
-const __filePath = path.join(process.cwd(), 'db/products.json');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const __filePath = path.resolve(__dirname, '../../db/products.json');
 
 export const readFromProducts = async(): Promise<Product[]> => {
   try{

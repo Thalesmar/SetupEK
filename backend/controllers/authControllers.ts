@@ -12,7 +12,9 @@ export type User = {
   createdAt: string;
 };
 
-const __filePath = path.join(process.cwd(), 'db/users.json');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const __filePath = path.resolve(__dirname, '../../db/users.json');
 
 export const readUsersData = async (): Promise<User[]> => {
   try {

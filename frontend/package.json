@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "optimize-images": "Node16",
+    "optimize-images": "node scripts/optimize-images.mjs",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
