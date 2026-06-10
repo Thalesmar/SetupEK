@@ -67,6 +67,12 @@ const Account = () => {
 
   useEffect(() => {
     const fetchProfile = async () => {
+      if (!token) {
+        console.error('No token found, redirecting to login');
+        window.location.href = '/auth/form';
+        return;
+      }
+
       try {
         const response = await fetch(`${API_BASE_URL}/account`, {
           method: 'GET',
@@ -76,21 +82,19 @@ const Account = () => {
           },
         });
 
-        if(!token){
-          console.error('No token found, redirecting to login');
-          window.location.href = '/auth/form';
-          return;
-        }
-
         const data = await response.json();
 
         if (!response.ok) {
-          throw new Error(data.message || 'Failed to fetch profile');
+          localStorage.removeItem('token');
+          window.location.href = '/auth/form';
+          return;
         }
 
         setUser(data.user);
       } catch (error) {
         console.error('Error fetching profile:', error);
+        localStorage.removeItem('token');
+        window.location.href = '/auth/form';
       }
     };
 

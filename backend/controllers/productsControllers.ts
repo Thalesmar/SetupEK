@@ -5,7 +5,14 @@ import { Product } from '../src/types.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const __filePath = path.resolve(__dirname, '../../db/products.json');
+
+const getDbPath = () => {
+  const devPath = path.resolve(__dirname, '../db/products.json');
+  const prodPath = path.resolve(__dirname, '../../db/products.json');
+  return __dirname.replace(/\\/g, '/').includes('/dist/') ? prodPath : devPath;
+};
+
+const __filePath = getDbPath();
 
 export const readFromProducts = async(): Promise<Product[]> => {
   try{

@@ -14,7 +14,14 @@ export type User = {
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const __filePath = path.resolve(__dirname, '../../db/users.json');
+
+const getDbPath = () => {
+  const devPath = path.resolve(__dirname, '../db/users.json');
+  const prodPath = path.resolve(__dirname, '../../db/users.json');
+  return __dirname.replace(/\\/g, '/').includes('/dist/') ? prodPath : devPath;
+};
+
+const __filePath = getDbPath();
 
 export const readUsersData = async (): Promise<User[]> => {
   try {
