@@ -39,6 +39,9 @@
         "Edges",
         "Stitched"
       ]
+    ],
+    "images": [
+      "/assets/hot-deals/hot-product-1.png"
     ]
   },
   {
@@ -81,6 +84,9 @@
         "Edges",
         "Stitched"
       ]
+    ],
+    "images": [
+      "/assets/hot-deals/hot-product-2.png"
     ]
   },
   {
@@ -123,6 +129,9 @@
         "Edges",
         "Stitched"
       ]
+    ],
+    "images": [
+      "/assets/hot-deals/hot-product-3.png"
     ]
   },
   {
@@ -165,6 +174,9 @@
         "Edges",
         "Stitched"
       ]
+    ],
+    "images": [
+      "/assets/hot-deals/hot-product-4.png"
     ]
   },
   {
@@ -207,6 +219,9 @@
         "Edges",
         "Stitched"
       ]
+    ],
+    "images": [
+      "/assets/hot-deals/hot-product-5.png"
     ]
   },
   {
@@ -217,7 +232,6 @@
     "discount": "-33%",
     "stock": "In stock",
     "image": "/assets/hot-deals/hot-product-6.png",
-    
     "category": "Mousepads",
     "sku": "XRP-OPX-CRB-XL-V2",
     "description": "The Cerberus edition brings the legendary three-headed warrior aesthetic to your desk. Premium XSoft surface with reinforced stitched edges for long-term durability.",
@@ -250,6 +264,9 @@
         "Edges",
         "Stitched"
       ]
+    ],
+    "images": [
+      "/assets/hot-deals/hot-product-6.png"
     ]
   },
   {
@@ -292,6 +309,9 @@
         "Edges",
         "Stitched"
       ]
+    ],
+    "images": [
+      "/assets/new-arrival/P-CHEN.png"
     ]
   },
   {
@@ -342,6 +362,9 @@
         "Buttons",
         "6"
       ]
+    ],
+    "images": [
+      "/assets/new-arrival/VXE-R1-Wireless-Black.png"
     ]
   },
   {
@@ -392,6 +415,9 @@
         "Buttons",
         "6"
       ]
+    ],
+    "images": [
+      "/assets/new-arrival/VXE-R1-Wireless-White.png"
     ]
   },
   {
@@ -442,6 +468,9 @@
         "Buttons",
         "6"
       ]
+    ],
+    "images": [
+      "/assets/new-arrival/VXE-R1-Wireless-White.png"
     ]
   },
   {
@@ -492,6 +521,9 @@
         "Buttons",
         "6"
       ]
+    ],
+    "images": [
+      "/assets/new-arrival/VXE-R1-Wireless-Black.png"
     ]
   },
   {
@@ -538,6 +570,9 @@
         "Battery",
         "4000mAh (wireless mode)"
       ]
+    ],
+    "images": [
+      "/assets/new-arrival/FGG-MADLIONS-NANO68-HE-ANSI-US-White.png"
     ]
   },
   {
@@ -580,6 +615,9 @@
         "Weight",
         "310g"
       ]
+    ],
+    "images": [
+      "/assets/top-categories/headset.png"
     ]
   },
   {
@@ -622,6 +660,9 @@
         "Weight",
         "310g"
       ]
+    ],
+    "images": [
+      "/assets/top-categories/headset.png"
     ]
   },
   {
@@ -660,6 +701,9 @@
         "Compatibility",
         "PC / PlayStation / Android"
       ]
+    ],
+    "images": [
+      "/assets/top-categories/controller.png"
     ]
   },
   {
@@ -698,6 +742,9 @@
         "Compatibility",
         "PC / PlayStation"
       ]
+    ],
+    "images": [
+      "/assets/top-categories/controller.png"
     ]
   },
   {
@@ -736,6 +783,9 @@
         "Frequency Response",
         "20 Hz – 20 kHz"
       ]
+    ],
+    "images": [
+      "/assets/top-categories/Performance.webp"
     ]
   },
   {
@@ -774,6 +824,9 @@
         "Frequency Response",
         "20 Hz – 20 kHz"
       ]
+    ],
+    "images": [
+      "/assets/top-categories/Performance.webp"
     ]
   },
   {
@@ -812,6 +865,9 @@
         "Frequency Response",
         "20 Hz – 20 kHz"
       ]
+    ],
+    "images": [
+      "/assets/brands/brands-logo/tangzu-logo.png"
     ]
   },
   {
@@ -850,6 +906,9 @@
         "Frequency Response",
         "20 Hz – 20 kHz"
       ]
+    ],
+    "images": [
+      "/assets/brands/brands-logo/tangzu-logo.png"
     ]
   },
   {
@@ -860,7 +919,6 @@
     "discount": "New",
     "stock": "In stock",
     "image": "/assets/hot-deals/hot-product-5.png",
-
     "category": "Accessories",
     "sku": "VXE-R1-SKATES",
     "description": "Replacement PTFE mouse skates for the VXE R1 series. Restores buttery glide and precise tracking after heavy use. Includes alcohol wipe and installation guide.",
@@ -885,6 +943,9 @@
         "Quantity",
         "2 sets included"
       ]
+    ],
+    "images": [
+      "/assets/hot-deals/hot-product-5.png"
     ]
   },
   {
@@ -919,6 +980,9 @@
         "Compatibility",
         "VXE R1 / R1 Pro Max"
       ]
+    ],
+    "images": [
+      "/assets/new-arrival/VXE-R1-Wireless-Black.png"
     ]
   }
 ]

@@ -16,6 +16,7 @@ type Product = {
   category: string;
   sku: string;
   description: string;
+  image: string;
   images: string[];
   specs: [string, string][];
 };
@@ -79,6 +80,10 @@ const Product = () => {
   }
 
   const isProductFavorited = isFavorited(product.id);
+  // Guard: use images[] if available, otherwise fall back to single image field
+  const galleryImages = product.images && product.images.length > 0
+    ? product.images
+    : [product.image].filter(Boolean);
 
   return (
     <div>
@@ -94,10 +99,10 @@ const Product = () => {
         {/* Gallery */}
         <div className="product-gallery">
           <div className="product-main-img">
-            <img src={product.images[activeThumb]} alt={product.title} />
+            <img src={galleryImages[activeThumb]} alt={product.title} />
           </div>
           <div className="product-thumbnails">
-            {product.images.map((t, i) => (
+            {galleryImages.map((t, i) => (
               <div
                 key={i}
                 className={`product-thumb ${activeThumb === i ? 'active' : ''}`}

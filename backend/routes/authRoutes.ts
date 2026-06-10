@@ -53,7 +53,8 @@ router.post('/signup', async (req, res) => {
       user: { firstName, secondName, email, role, createdAt },
     });
   } catch (error) {
-    res.status(500).json({ message: 'Server error', error });
+    console.error('[signup] Server error:', error);
+    res.status(500).json({ message: 'Server error', detail: error instanceof Error ? error.message : String(error) });
   }
 });
 
@@ -125,7 +126,8 @@ router.post('/login', async (req, res) => {
       token,
     });
   } catch (error) {
-    return res.status(500).json({ message: 'Server error' });
+    console.error('[login] Server error:', error);
+    return res.status(500).json({ message: 'Server error', detail: error instanceof Error ? error.message : String(error) });
   }
 });
 
