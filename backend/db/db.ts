@@ -41,7 +41,11 @@ const seedProducts = async () => {
       return;
     }
 
-    const productsJsonPath = path.resolve(__dirname, 'products.json');
+    const isDist = __dirname.replace(/\\/g, '/').includes('/dist/');
+    const productsJsonPath = isDist 
+      ? path.resolve(__dirname, '../../db/products.json')
+      : path.resolve(__dirname, 'products.json');
+      
     console.log(`Reading initial products from: ${productsJsonPath}`);
     const data = await fs.readFile(productsJsonPath, 'utf-8');
     const products = JSON.parse(data);
