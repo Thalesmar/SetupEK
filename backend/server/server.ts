@@ -22,16 +22,21 @@ connectDB();
 // Security Headers
 app.use(helmet());
 
-// CORS configuration - strict origin in production, allow wildcard/localhost in dev
+// CORS configuration - allow localhost, vercel subdomains, and setupek.app automatically
 const allowedOrigins = process.env.CORS_ALLOWED_ORIGINS
   ? process.env.CORS_ALLOWED_ORIGINS.split(',')
-  : ['http://localhost:5173', 'http://127.0.0.1:5173', 'http://localhost:3000'];
+  : [];
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) !== -1 || allowedOrigins.includes('*')) {
+    
+    const isLocalhost = origin.startsWith('http://localhost:') || origin.startsWith('http://127.0.0.1:');
+    const isVercel = origin.endsWith('.vercel.app');
+    const isCustomDomain = origin === 'https://setupek.app' || origin === 'https://www.setupek.app';
+    const isExplicitlyAllowed = allowedOrigins.includes('*') || allowedOrigins.includes(origin);
+
+    if (isLocalhost || isVercel || isCustomDomain || isExplicitlyAllowed) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
