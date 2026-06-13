@@ -1,19 +1,10 @@
+import './polyfill.js';
 import dotenv from 'dotenv';
 import path from 'path';
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
-import crypto from 'crypto';
-
-// Polyfill globalThis.crypto for Node.js environments where it is not defined (e.g. Node 18 or older)
-if (!globalThis.crypto) {
-  Object.defineProperty(globalThis, 'crypto', {
-    value: crypto.webcrypto || crypto,
-    writable: true,
-    configurable: true,
-  });
-}
 
 import { connectDB } from '../db/db.js';
 import router from '../routes/authRoutes.js';
