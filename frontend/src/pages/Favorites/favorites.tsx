@@ -64,13 +64,17 @@ const Favorites = () => {
             <div className="favorites-card-info">
               <p className="favorites-card-brand">{item.brand}</p>
               <p className="favorites-card-title">{item.title}</p>
+              <span className={`shop-card-stock ${item.stock === 'Pre-order' ? 'pre-order' : (item.inStock ? 'in-stock' : 'out-of-stock')}`}>
+                {item.stock === 'Pre-order' ? 'Pre-order' : (item.inStock ? 'In stock' : 'Out of stock')}
+              </span>
               <div className="favorites-card-bottom">
                 <span className="favorites-card-price">{item.price}</span>
                 <button
                   className="favorites-add-btn"
+                  disabled={!item.inStock}
                   onClick={() => cart?.addToCart({ id: item.id, title: item.title, price: item.price, images: item.images }, 1)}
                 >
-                  Add to cart
+                  {item.inStock ? 'Add to cart' : 'Out of stock'}
                 </button>
               </div>
             </div>

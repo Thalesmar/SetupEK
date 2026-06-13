@@ -9,7 +9,7 @@ const Cart = () => {
   const cartCount = cart?.cartCount ?? 0;
 
   const total = cartItems.reduce((sum, item) => {
-    const price = parseFloat(item.price.replace(/[^\d.]/g, ''));
+    const price = parseFloat(String(item.price).replace(/[^\d.]/g, ''));
     return sum + price * item.quantity;
   }, 0);
 
@@ -33,11 +33,11 @@ const Cart = () => {
         {cartItems.map((item) => (
           <div key={item.id} className="cart-item">
             <div className="cart-item-img">
-              <img src={item.image} alt={item.title} />
+              <img src={item.image} alt={item.name} />
             </div>
 
             <div className="cart-item-info">
-              <p className="cart-item-title">{item.title}</p>
+              <p className="cart-item-title">{item.name}</p>
               <span className="cart-item-variant">Qty: {item.quantity}</span>
             </div>
 

@@ -5,7 +5,6 @@
     "brand": "X-Raypad",
     "price": "399 MAD",
     "discount": "-43%",
-    "stock": "In stock",
     "image": "/assets/hot-deals/hot-product-1.png",
     "category": "Mousepads",
     "sku": "XRP-AC2-BLK-XL",
@@ -42,7 +41,9 @@
     ],
     "images": [
       "/assets/hot-deals/hot-product-1.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 7
   },
   {
     "id": 2,
@@ -50,7 +51,6 @@
     "brand": "X-Raypad",
     "price": "499 MAD",
     "discount": "-38%",
-    "stock": "In stock",
     "image": "/assets/hot-deals/hot-product-2.png",
     "category": "Mousepads",
     "sku": "XRP-AC0-GRY-XL",
@@ -87,7 +87,9 @@
     ],
     "images": [
       "/assets/hot-deals/hot-product-2.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 8
   },
   {
     "id": 3,
@@ -95,7 +97,6 @@
     "brand": "X-Raypad",
     "price": "399 MAD",
     "discount": "-43%",
-    "stock": "Pre-order",
     "image": "/assets/hot-deals/hot-product-3.png",
     "category": "Mousepads",
     "sku": "XRP-OPX-CRB-XL",
@@ -132,7 +133,9 @@
     ],
     "images": [
       "/assets/hot-deals/hot-product-3.png"
-    ]
+    ],
+    "inStock": false,
+    "stock": 0
   },
   {
     "id": 4,
@@ -140,7 +143,6 @@
     "brand": "X-Raypad",
     "price": "599 MAD",
     "discount": "-33%",
-    "stock": "In stock",
     "image": "/assets/hot-deals/hot-product-4.png",
     "category": "Mousepads",
     "sku": "XRP-OPX-ORG-XL",
@@ -177,7 +179,9 @@
     ],
     "images": [
       "/assets/hot-deals/hot-product-4.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 15
   },
   {
     "id": 5,
@@ -185,7 +189,6 @@
     "brand": "X-Raypad",
     "price": "599 MAD",
     "discount": "-33%",
-    "stock": "In stock",
     "image": "/assets/hot-deals/hot-product-5.png",
     "category": "Mousepads",
     "sku": "XRP-OPX-ORG-XL-V2",
@@ -222,7 +225,9 @@
     ],
     "images": [
       "/assets/hot-deals/hot-product-5.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 4
   },
   {
     "id": 6,
@@ -230,7 +235,6 @@
     "brand": "X-Raypad",
     "price": "599 MAD",
     "discount": "-33%",
-    "stock": "In stock",
     "image": "/assets/hot-deals/hot-product-6.png",
     "category": "Mousepads",
     "sku": "XRP-OPX-CRB-XL-V2",
@@ -267,7 +271,9 @@
     ],
     "images": [
       "/assets/hot-deals/hot-product-6.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 9
   },
   {
     "id": 7,
@@ -275,7 +281,6 @@
     "brand": "X-Raypad",
     "price": "599 MAD",
     "discount": "New",
-    "stock": "In stock",
     "image": "/assets/new-arrival/P-CHEN.png",
     "category": "Mousepads",
     "sku": "XRP-PCHEN-SPD-XL",
@@ -312,7 +317,9 @@
     ],
     "images": [
       "/assets/new-arrival/P-CHEN.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 5
   },
   {
     "id": 8,
@@ -320,7 +327,6 @@
     "brand": "VXE",
     "price": "419 MAD",
     "discount": "New",
-    "stock": "In stock",
     "image": "/assets/new-arrival/VXE-R1-Wireless-Black.png",
     "category": "Mouses",
     "sku": "VXE-R1-WL-BLK",
@@ -365,7 +371,9 @@
     ],
     "images": [
       "/assets/new-arrival/VXE-R1-Wireless-Black.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 12
   },
   {
     "id": 9,
@@ -373,7 +381,6 @@
     "brand": "VXE",
     "price": "419 MAD",
     "discount": "New",
-    "stock": "Pre-order",
     "image": "/assets/new-arrival/VXE-R1-Wireless-White.png",
     "category": "Mouses",
     "sku": "VXE-R1-WL-WHT",
@@ -418,7 +425,9 @@
     ],
     "images": [
       "/assets/new-arrival/VXE-R1-Wireless-White.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": "Pre-order"
   },
   {
     "id": 10,
@@ -426,7 +435,6 @@
     "brand": "VXE",
     "price": "499 MAD",
     "discount": "New",
-    "stock": "In stock",
     "image": "/assets/new-arrival/VXE-R1-Wireless-White.png",
     "category": "Mouses",
     "sku": "VXE-R1PM-WL-WHT",
@@ -471,7 +479,9 @@
     ],
     "images": [
       "/assets/new-arrival/VXE-R1-Wireless-White.png"
-    ]
+    ],
+    "inStock": false,
+    "stock": 0
   },
   {
     "id": 11,
@@ -479,7 +489,6 @@
     "brand": "VXE",
     "price": "499 MAD",
     "discount": "New",
-    "stock": "In stock",
     "image": "/assets/new-arrival/VXE-R1-Wireless-Black.png",
     "category": "Mouses",
     "sku": "VXE-R1PM-WL-BLK",
@@ -524,7 +533,9 @@
     ],
     "images": [
       "/assets/new-arrival/VXE-R1-Wireless-Black.png"
-    ]
+    ],
+    "inStock": false,
+    "stock": 0
   },
   {
     "id": 12,
@@ -532,7 +543,6 @@
     "brand": "FGG",
     "price": "519 MAD",
     "discount": "New",
-    "stock": "In stock",
     "image": "/assets/new-arrival/FGG-MADLIONS-NANO68-HE-ANSI-US-White.png",
     "category": "Keyboards",
     "sku": "FGG-NANO68-HE-WHT",
@@ -573,7 +583,9 @@
     ],
     "images": [
       "/assets/new-arrival/FGG-MADLIONS-NANO68-HE-ANSI-US-White.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 20
   },
   {
     "id": 13,
@@ -581,7 +593,6 @@
     "brand": "ATK",
     "price": "349 MAD",
     "discount": "-22%",
-    "stock": "In stock",
     "image": "/assets/top-categories/headset.png",
     "category": "Headsets",
     "sku": "ATK-M1-WL-BLK",
@@ -618,7 +629,9 @@
     ],
     "images": [
       "/assets/top-categories/headset.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 15
   },
   {
     "id": 14,
@@ -626,7 +639,6 @@
     "brand": "ATK",
     "price": "349 MAD",
     "discount": "New",
-    "stock": "In stock",
     "image": "/assets/top-categories/headset.png",
     "category": "Headsets",
     "sku": "ATK-M1-WL-WHT",
@@ -663,7 +675,9 @@
     ],
     "images": [
       "/assets/top-categories/headset.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 7
   },
   {
     "id": 15,
@@ -671,7 +685,6 @@
     "brand": "ATK",
     "price": "549 MAD",
     "discount": "-15%",
-    "stock": "In stock",
     "image": "/assets/top-categories/controller.png",
     "category": "Controllers",
     "sku": "ATK-RS6-WL",
@@ -704,7 +717,9 @@
     ],
     "images": [
       "/assets/top-categories/controller.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 6
   },
   {
     "id": 16,
@@ -712,7 +727,6 @@
     "brand": "ATK",
     "price": "449 MAD",
     "discount": "New",
-    "stock": "In stock",
     "image": "/assets/top-categories/controller.png",
     "category": "Controllers",
     "sku": "ATK-RS6-WD",
@@ -745,7 +759,9 @@
     ],
     "images": [
       "/assets/top-categories/controller.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 11
   },
   {
     "id": 17,
@@ -753,7 +769,6 @@
     "brand": "ATK",
     "price": "449 MAD",
     "discount": "-18%",
-    "stock": "In stock",
     "image": "/assets/top-categories/Performance.webp",
     "category": "Microphones",
     "sku": "ATK-USB-MIC",
@@ -786,7 +801,9 @@
     ],
     "images": [
       "/assets/top-categories/Performance.webp"
-    ]
+    ],
+    "inStock": true,
+    "stock": 14
   },
   {
     "id": 18,
@@ -794,7 +811,6 @@
     "brand": "ATK",
     "price": "799 MAD",
     "discount": "New",
-    "stock": "Pre-order",
     "image": "/assets/top-categories/Performance.webp",
     "category": "Microphones",
     "sku": "ATK-XLR-MIC",
@@ -827,7 +843,9 @@
     ],
     "images": [
       "/assets/top-categories/Performance.webp"
-    ]
+    ],
+    "inStock": true,
+    "stock": "Pre-order"
   },
   {
     "id": 19,
@@ -835,7 +853,6 @@
     "brand": "Tangzu",
     "price": "299 MAD",
     "discount": "-20%",
-    "stock": "In stock",
     "image": "/assets/brands/brands-logo/tangzu-logo.png",
     "category": "IEMs",
     "sku": "TZ-WANER-SG2",
@@ -868,7 +885,9 @@
     ],
     "images": [
       "/assets/brands/brands-logo/tangzu-logo.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 18
   },
   {
     "id": 20,
@@ -876,7 +895,6 @@
     "brand": "Tangzu",
     "price": "499 MAD",
     "discount": "New",
-    "stock": "In stock",
     "image": "/assets/brands/brands-logo/tangzu-logo.png",
     "category": "IEMs",
     "sku": "TZ-FUDU-JRN",
@@ -909,7 +927,9 @@
     ],
     "images": [
       "/assets/brands/brands-logo/tangzu-logo.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 9
   },
   {
     "id": 21,
@@ -917,7 +937,6 @@
     "brand": "VXE",
     "price": "89 MAD",
     "discount": "New",
-    "stock": "In stock",
     "image": "/assets/hot-deals/hot-product-5.png",
     "category": "Accessories",
     "sku": "VXE-R1-SKATES",
@@ -946,7 +965,9 @@
     ],
     "images": [
       "/assets/hot-deals/hot-product-5.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 25
   },
   {
     "id": 22,
@@ -954,7 +975,6 @@
     "brand": "VXE",
     "price": "129 MAD",
     "discount": "-10%",
-    "stock": "In stock",
     "image": "/assets/new-arrival/VXE-R1-Wireless-Black.png",
     "category": "Accessories",
     "sku": "VXE-R1-CABLE",
@@ -983,6 +1003,8 @@
     ],
     "images": [
       "/assets/new-arrival/VXE-R1-Wireless-Black.png"
-    ]
+    ],
+    "inStock": true,
+    "stock": 13
   }
 ]

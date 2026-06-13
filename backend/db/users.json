@@ -16,5 +16,14 @@
     "password": "$2b$10$ZTYUajFBzcTs6qJE.DxTkux/8.YoltnCZzVJPT1rE/OycpW/eweH.",
     "role": "user",
     "createdAt": "2026-06-10T04:30:27.260Z"
+  },
+  {
+    "id": "5b205e16-a965-4237-94fe-149657625e00",
+    "firstName": "Test",
+    "secondName": "User",
+    "email": "test-375189254@user.com",
+    "password": "$2b$10$GGf9pKUPozhKqp.CzFjkKOQzDpDFNMXAlRmYC2DKai.MiWKc3JM9K",
+    "role": "user",
+    "createdAt": "2026-06-13T14:47:08.829Z"
   }
 ]

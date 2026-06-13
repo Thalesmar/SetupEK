@@ -113,13 +113,20 @@ const ProductSlider = ({ title, type }: ProductSliderProps) => {
                 <div className="hot-deals-info">
                   <span className="hot-deals-brand">{product.brand}</span>
                   <h3>{product.title}</h3>
-                  <span className="hot-deals-stock">{product.stock}</span>
+                  <span className="hot-deals-stock">
+                    {product.stock === 'Pre-order'
+                      ? 'Pre-order'
+                      : product.inStock
+                      ? 'In Stock'
+                      : 'Out of stock'}
+                  </span>
                   <p>{product.price}</p>
                 </div>
 
                 <button
                   className="hot-deals-cart-btn"
                   type="button"
+                  disabled={!product.inStock}
                   onClick={() =>
                     cart?.addToCart(
                       {
@@ -132,7 +139,7 @@ const ProductSlider = ({ title, type }: ProductSliderProps) => {
                     )
                   }
                 >
-                  Add to cart
+                  {product.inStock ? 'Add to cart' : 'Out of stock'}
                 </button>
               </div>
             </div>

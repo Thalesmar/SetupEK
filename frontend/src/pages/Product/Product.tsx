@@ -12,7 +12,8 @@ type Product = {
   title: string;
   brand: string;
   price: string;
-  stock: string;
+  stock: number | string;
+  inStock?: boolean;
   category: string;
   sku: string;
   description: string;
@@ -119,7 +120,9 @@ const Product = () => {
           <p className="product-info-brand">{product.brand}</p>
           <h1 className="product-info-title">{product.title}</h1>
           <p className="product-info-price">{product.price}</p>
-          <span className="product-info-stock">✓ {product.stock}</span>
+          <span className="product-info-stock">
+            ✓ {product.stock === 'Pre-order' ? 'Pre-order' : (product.inStock ? `In stock (${product.stock} units)` : 'Out of stock')}
+          </span>
 
           <div className="product-divider" />
 
@@ -131,9 +134,10 @@ const Product = () => {
             </div>
             <button
               className="product-add-cart"
+              disabled={!product.inStock}
               onClick={() => product && cart?.addToCart(product, qty)}
             >
-              Add to Cart
+              {product.inStock ? 'Add to Cart' : 'Out of Stock'}
             </button>
             <button
               className="product-wishlist"

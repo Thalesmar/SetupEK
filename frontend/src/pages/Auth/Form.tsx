@@ -59,6 +59,7 @@ const Form = () => {
 
       if (data.token) {
         localStorage.setItem('token', data.token);
+        window.dispatchEvent(new Event('auth-change'));
       }
 
       setEmail('');

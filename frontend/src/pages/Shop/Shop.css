@@ -264,3 +264,28 @@
 }
 
 @media (max-width: 480px) { .shop-grid { grid-template-columns: 1fr; } }
+
+.shop-card-stock {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 6px;
+  width: fit-content;
+}
+
+.shop-card-stock.in-stock {
+  background: #dff5e7;
+  color: #159947;
+}
+
+.shop-card-stock.pre-order {
+  background: #e6f0ff;
+  color: #006bff;
+}
+
+.shop-card-stock.out-of-stock {
+  background: #ffebeb;
+  color: #e63946;
+}

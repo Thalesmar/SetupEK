@@ -41,7 +41,11 @@ export const Shop = () => {
   const filtered = products
     .filter((p) => selectedCategories.length === 0 || selectedCategories.includes(p.category))
     .filter((p) => selectedBrands.length === 0 || selectedBrands.includes(p.brand))
-    .filter((p) => selectedAvailability.length === 0 || selectedAvailability.includes(p.stock))
+    .filter((p) => {
+      if (selectedAvailability.length === 0) return true;
+      const status = p.stock === 'Pre-order' ? 'Pre-order' : (p.inStock ? 'In stock' : 'Out of stock');
+      return selectedAvailability.includes(status);
+    })
     .sort((a, b) => {
       if (sortOrder === 'low') return parseInt(a.price) - parseInt(b.price);
       if (sortOrder === 'high') return parseInt(b.price) - parseInt(a.price);
@@ -182,16 +186,20 @@ export const Shop = () => {
                 <div className="shop-card-info">
                   <p className="shop-card-brand">{p.brand}</p>
                   <p className="shop-card-title">{p.title}</p>
+                  <span className={`shop-card-stock ${p.stock === 'Pre-order' ? 'pre-order' : (p.inStock ? 'in-stock' : 'out-of-stock')}`}>
+                    {p.stock === 'Pre-order' ? 'Pre-order' : (p.inStock ? 'In stock' : 'Out of stock')}
+                  </span>
                   <div className="shop-card-bottom">
                     <span className="shop-card-price">{p.price}</span>
                     <button
                       className="shop-card-btn"
+                      disabled={!p.inStock}
                       onClick={(e) => {
                         e.preventDefault();
                         cart?.addToCart({ id: p.id, title: p.title, price: p.price, images: p.images }, 1);
                       }}
                     >
-                      Add to cart
+                      {p.inStock ? 'Add to cart' : 'Out of stock'}
                     </button>
                   </div>
                 </div>

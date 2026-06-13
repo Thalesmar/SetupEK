@@ -4,7 +4,8 @@ export interface Product {
   brand: string;
   price: string;
   discount: string;
-  stock: string;
+  stock: number | string;
+  inStock?: boolean;
   image: string;
   images: string[];
   category: string;
@@ -12,3 +13,4 @@ export interface Product {
   description: string;
   specs: [string, string][];
 }
+

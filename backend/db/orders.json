@@ -1,0 +1,30 @@
+[
+  {
+    "id": "#EK-2025-2138",
+    "userId": "38e22bda-53a0-436d-8b57-90327adcacb5",
+    "items": [
+      {
+        "id": "1",
+        "name": "Aqua Control II Black Galaxy XL SQ",
+        "price": "399 MAD",
+        "quantity": 3,
+        "image": "/assets/hot-deals/hot-product-1.png"
+      }
+    ],
+    "subtotal": 1197,
+    "total": 1197,
+    "shippingAddress": {
+      "firstName": "yassine",
+      "lastName": "harroute",
+      "email": "hello@gmail.com",
+      "phone": "19073412735",
+      "address": "3512 Blackwell Street",
+      "city": "Anchorage",
+      "postalCode": "99515",
+      "region": "Casablanca-Settat"
+    },
+    "paymentMethod": "Cash on Delivery",
+    "status": "processing",
+    "createdAt": "2026-06-13T14:47:47.999Z"
+  }
+]

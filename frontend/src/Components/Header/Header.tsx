@@ -18,7 +18,9 @@ const navToProductCategory: Record<string, string> = {
 const Header = () => {
   const { products } = useProductContext();
   const [languageBtn, setLanguageBtn] = useState<string>('EN');
-  const [isLogin, setIsLogin] = useState<boolean>(() => !!localStorage.getItem('token'));
+  const [isLogin, setIsLogin] = useState<boolean>(
+    () => !!localStorage.getItem('token')
+  );
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
@@ -32,7 +34,8 @@ const Header = () => {
         products
           .filter(
             (p) =>
-              p.category === (navToProductCategory[category.name] ?? category.name)
+              p.category ===
+              (navToProductCategory[category.name] ?? category.name)
           )
           .slice(0, 2)
           .map((p) => ({
@@ -45,8 +48,14 @@ const Header = () => {
     );
   }, [products]);
 
-  const hotDeals = useMemo(() => products.filter((p) => p.discount.startsWith('-')), [products]);
-  const newArrivals = useMemo(() => products.filter((p) => p.discount === 'New'), [products]);
+  const hotDeals = useMemo(
+    () => products.filter((p) => p.discount.startsWith('-')),
+    [products]
+  );
+  const newArrivals = useMemo(
+    () => products.filter((p) => p.discount === 'New'),
+    [products]
+  );
 
   const handleMobileMenu = () => {
     setIsMobileMenuOpen((prev) => !prev);
@@ -59,7 +68,11 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener('storage', checkLoginStatus);
-    return () => window.removeEventListener('storage', checkLoginStatus);
+    window.addEventListener('auth-change', checkLoginStatus);
+    return () => {
+      window.removeEventListener('storage', checkLoginStatus);
+      window.removeEventListener('auth-change', checkLoginStatus);
+    };
   }, [checkLoginStatus]);
 
   return (
@@ -117,7 +130,6 @@ const Header = () => {
           <a href="/Favorites/Favorites" className="favorite">
             <MdFavoriteBorder />
             <span>Favorites</span>
-            
           </a>
 
           <a href="/Cart/Cart" className="cart">
@@ -233,8 +245,10 @@ const Header = () => {
                         <div className="product-img">
                           <img src={p.image} alt={p.title} />
                         </div>
-                        <h3>{p.title}</h3>
-                        <p>{p.price}</p>
+                        <div className='product-bottom'>
+                          <h3>{p.title}</h3>
+                          <p>{p.price}</p>
+                        </div>
                       </a>
                     ))}
                   </div>
@@ -273,8 +287,10 @@ const Header = () => {
                         <div className="product-img">
                           <img src={p.image} alt={p.title} />
                         </div>
-                        <h3>{p.title}</h3>
-                        <p>{p.price}</p>
+                        <div className="product-bottom">
+                          <h3>{p.title}</h3>
+                          <p>{p.price}</p>
+                        </div>
                       </a>
                     ))}
                   </div>
@@ -331,8 +347,10 @@ const Header = () => {
                           <div className="product-img">
                             <img src={p.image} alt={p.name} />
                           </div>
-                          <h3>{p.name}</h3>
-                          <p>{p.price}</p>
+                          <div className="product-bottom">
+                            <h3>{p.name}</h3>
+                            <p>{p.price}</p>
+                          </div>
                         </a>
                       ))}
                     </div>
@@ -373,10 +391,12 @@ const Header = () => {
                             style={{ objectFit: 'contain' }}
                           />
                         </div>
-                        <h3>{b.brandName}</h3>
-                        <p style={{ fontSize: '12px', color: '#888' }}>
-                          {b.productCount} products
-                        </p>
+                        <div className="product-bottom">
+                          <h3>{b.brandName}</h3>
+                          <p style={{ fontSize: '12px', color: '#888' }}>
+                            {b.productCount} products
+                          </p>
+                        </div>
                       </div>
                     ))}
                   </div>

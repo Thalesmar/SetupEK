@@ -162,6 +162,13 @@
 
 .favorites-add-btn:hover { background: #0056d6; }
 
+.favorites-add-btn:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .favorites-empty {
   text-align: center;
   padding: 5rem 0;
